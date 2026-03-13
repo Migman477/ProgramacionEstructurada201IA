@@ -9,7 +9,7 @@ def asignar_calificaciones ():
     elif calificacion >=80 and calificacion <90:
         print("Tu calificacion es B")
     
-    elif calificacion >=70 and calificacion <800:
+    elif calificacion >=70 and calificacion <80:
         print("Tu calificacion es C")
     
     elif calificacion == 69:
