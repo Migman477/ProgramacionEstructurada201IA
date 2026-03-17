@@ -17,10 +17,18 @@ def mostran_funciones_math(numero):
 
     print(f"El resultado de la suma de los cuadrados del sen y cos de ex es {resultado}")
 
+def tangente(numero):
+
+    tan_x = m.tan(numero)
+
+    print(f"La tangente de {numero} es {tan_x}")
+
+
 def main ():
 
     numero = float(input("Ingrese in numero: "))
     mostran_funciones_math(numero)
+    tangente(numero)
 
 if __name__ == "__main__":
     main()
