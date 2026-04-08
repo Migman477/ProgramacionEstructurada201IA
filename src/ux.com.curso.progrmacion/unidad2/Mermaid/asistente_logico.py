@@ -12,9 +12,7 @@ def obtener_solicitud():
 
     print(f"Hola, soy {globalnombre_asistente}, tu asistente lógico")
 
-    solicitud = input("¿En qué puedo ayudarte hoy? : ").lower()
- 
-    return solicitud
+
 
 
 
