@@ -29,6 +29,16 @@ def detectar_intencion(solicitud):
     
     else:
         return "Lo siento, todavía no entiendo ese comando. ¿Podrías intentar con otra palabra?"
+
+def main():
+    
+    solicitud = obtener_solicitud()
+    respuesta = detectar_intencion(solicitud)
+    print(respuesta)
+    print(f"Proceso finalizado. Gracias por usar {globalnombre_asistente}.")
+
+if __name__ == "__main__":
+    main()
     
     
 
