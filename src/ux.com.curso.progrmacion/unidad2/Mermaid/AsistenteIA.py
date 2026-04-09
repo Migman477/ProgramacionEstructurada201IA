@@ -20,6 +20,13 @@ def evaluar_confianza(nivel_confianza,instruccion):
     if nivel_confianza >= 95.0:
         print("Aviso: El modelo ha sido reforzado con éxito debido a la alta precisión.")
 
+    print("Sesion de procesamiento finalizada.")
 
+def main():
+    instruccion, nivel_confianza = captura_datos()
+    evaluar_confianza(nivel_confianza,instruccion)
+
+if __name__ == "__main__":
+    main()
 
 
