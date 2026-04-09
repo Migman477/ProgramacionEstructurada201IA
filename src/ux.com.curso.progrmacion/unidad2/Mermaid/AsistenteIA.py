@@ -11,8 +11,15 @@ def captura_datos():
 def evaluar_confianza(nivel_confianza,instruccion):
 
     if nivel_confianza >= UMBRAL_ALTO:
-        print("Confianza alta. Procediendo con la acción.")
-    elif nivel_confianza >= UMBRAL_MINIMO:
-        print("Confianza moderada. Sugerencia: revise la instrucción antes de proceder.")
+        print(f"Ejecutando la acción: {instruccion}... (Éxito)")
+    elif nivel_confianza >= UMBRAL_MINIMO and nivel_confianza < UMBRAL_ALTO:
+        print(f"Confianza insuficiente. ¿Se refiere a: {instruccion}? Por favor confirme.")
     else:
-        print("Confianza baja. No se recomienda proceder con esta instrucción.")
+        print("Error 404: No pude entender la instrucción. Intente hablar más claro.")
+
+    if nivel_confianza >= 95.0:
+        print("Aviso: El modelo ha sido reforzado con éxito debido a la alta precisión.")
+
+
+
+
