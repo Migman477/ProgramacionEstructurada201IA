@@ -22,5 +22,12 @@ def navegacion(distancia, color, peaton):
     if color not in ["rojo", "amarillo", "verde"]:
         print("Error de lectura en sensores: Color de semáforo no reconocido.")       
     
-    print("Condiciones normales. Continuando la marcha.")
+    print("Monitoreo de sensores constante... Sistema activo.")
+
+
+def main():
+    navegacion(distancia_objeto, color_semaforo, peaton_cruzando)
+
+if __name__ == "__main__":
+    main()
     
