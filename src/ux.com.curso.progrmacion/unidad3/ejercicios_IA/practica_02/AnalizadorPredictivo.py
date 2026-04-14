@@ -7,7 +7,7 @@ def limpiar_dato(lectura):
     FUNCIÓN 1: Recibe un string del archivo, lo convierte a float.
     Si el dato es > 100 o < 0, devuelve None (Ruido detectado).
     """
-    
+
     try:
         valor = float(lectura)
 
@@ -36,19 +36,41 @@ def calcular_alerta(valor_normalizado):
  
 pass
 def obtener_estadisticas(lista_datos):
- """
- FUNCIÓN 3: Recibe la lista de datos válidos.
- Devuelve una TUPLA con: (Valor máximo, Valor mínimo, Promedio).
- """
+    """
+    FUNCIÓN 3: Recibe la lista de datos válidos.
+    Devuelve una TUPLA con: (Valor máximo, Valor mínimo, Promedio).
+    """
+    if not lista_datos:
+        return (0, 0, 0)
+    
+    maximo = max(lista_datos)
+    minimo = min(lista_datos)
+    promedio = sum(lista_datos) / len(lista_datos)
+    
+    return (maximo, minimo, promedio)
  
  
- def generar_reporte(total_datos, validos, estadisticas):
+def generar_reporte(total_datos, validos, estadisticas):
 
     """
     FUNCIÓN 4: Imprime un resumen formateado de los resultados.
     """
- # IMPLEMENTAR AQUÍ
- pass
+    # IMPLEMENTAR AQUÍ
+    v_max, vmin, promedio = estadisticas
+    descartados = total_datos - validos
+    
+    print("*"*30)
+    print("REPORTE DE ANALISIS PREDICTIVO")
+    print("*"*30)
+    print(f"Total de lecturas: {total_datos}")
+    print(f"Total de lecturas válidas: {validos}")
+    print(f"Total de lecturas inválidas: {descartados}")
+    print(f"Valor máximo: {v_max:.2f}")
+    print(f"Valor mínimo: {vmin:.2f}")
+    print(f"Promedio: {promedio:.2f}")
+    print("*"*30)
+
+pass
 # --- LÓGICA PRINCIPAL (NO MODIFICAR ESTA PARTE) ---
 def ejecutar_pipeline():
     datos_finales = []
