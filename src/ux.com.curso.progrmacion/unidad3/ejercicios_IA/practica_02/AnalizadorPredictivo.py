@@ -1,13 +1,13 @@
 # --- SISTEMA DE MONITOREO INDUSTRIAL ---
 import os
 
-"""
- FUNCIÓN 1: Recibe un string del archivo, lo convierte a float.
- Si el dato es > 100 o < 0, devuelve None (Ruido detectado).
-"""
-
 def limpiar_dato(lectura):
-
+    
+    """
+    FUNCIÓN 1: Recibe un string del archivo, lo convierte a float.
+    Si el dato es > 100 o < 0, devuelve None (Ruido detectado).
+    """
+    
     try:
         valor = float(lectura)
 
@@ -18,14 +18,13 @@ def limpiar_dato(lectura):
     
     except ValueError:
         return None
-"""
- FUNCIÓN 2: Recibe el valor (0.0 a 1.0).
- Devuelve 'CRÍTICO' si es > 0.8, 'PRECAUCIÓN' si es > 0.5,
- y 'NORMAL' en cualquier otro caso.
-"""
+
 def calcular_alerta(valor_normalizado):
-    datos_limpios = []
-    ruido_detectado = 0
+    """
+    FUNCIÓN 2: Recibe el valor (0.0 a 1.0).
+    Devuelve 'CRÍTICO' si es > 0.8, 'PRECAUCIÓN' si es > 0.5,
+    y 'NORMAL' en cualquier otro caso.
+    """
 
     if valor_normalizado > 0.8:
         return "CRITICO"
@@ -44,6 +43,7 @@ def obtener_estadisticas(lista_datos):
  
  
  def generar_reporte(total_datos, validos, estadisticas):
+
     """
     FUNCIÓN 4: Imprime un resumen formateado de los resultados.
     """
@@ -56,11 +56,11 @@ def ejecutar_pipeline():
 
     with open("lecturas_sensores.txt", "r") as f:
         for linea in f:
-        cuenta_total += 1
-        valor = limpiar_dato(linea.strip())
-        if valor is not None:
-        # Normalizar para la IA (0-1)
-        datos_finales.append(valor / 100)
+            cuenta_total += 1
+            valor = limpiar_dato(linea.strip())
+            if valor is not None:
+            # Normalizar para la IA (0-1)
+                datos_finales.append(valor / 100)
 
     if datos_finales:
         stats = obtener_estadisticas(datos_finales)
