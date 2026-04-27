@@ -11,8 +11,6 @@ def procesar_pregunta(mensaje_usuario):
     conocimiento = {
 
         #CONCEPTOS DE ESTRUCTURA DE CONTROL
-        
-
         "if": "Estructura de control que permite ejecutar un bloque de código si se cumple una condición.",
         "else": "Estructura de control que permite ejecutar un bloque de código si no se cumple una condición.",
         "elif": "Estructura de control que permite ejecutar un bloque de código si se cumple una condición adicional después de un if.",
@@ -43,6 +41,15 @@ def procesar_pregunta(mensaje_usuario):
         "len": "Función que se utiliza para obtener la longitud de un objeto.",
         "type": "Función que se utiliza para obtener el tipo de un objeto.",
         "range": "Función que se utiliza para generar una secuencia de números.",
+
+        #Conceptos de programacion estruturada
+        "programacion estructurada": "Paradigma de programación que se basa en la división de un programa en bloques de código que realizan tareas específicas, utilizando estructuras de control y funciones para organizar el código de manera clara y eficiente."
+        ,
+        "variable": "Espacio en memoria reservado para almacenar un valor que puede cambiar durante la ejecución del programa.",
+        "operadores": "Símbolos que permiten realizar operaciones matemáticas, lógicas o de comparación entre valores.",
+        "comentario": "Texto en el código que no se ejecuta y sirve para explicar el funcionamiento del programa.",
+        "indentacion": "Espacios al inicio de una línea de código que definen la jerarquía y pertenencia a bloques de control en Python."
+        
     }
 
     for clave in conocimiento:
