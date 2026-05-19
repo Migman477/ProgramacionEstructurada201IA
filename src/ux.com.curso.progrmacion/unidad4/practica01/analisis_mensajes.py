@@ -1,7 +1,7 @@
 #crear una funcion que liste las librerias en este codigo
 import re
 import numpy as np
-import os
+
 
 def listar_librerias(codigo):
     # Utilizamos una expresión regular para encontrar las líneas que importan librerías
@@ -41,3 +41,6 @@ print(f"Pico de actividad registrado: {maximo} mensajes")
 print(f"Variabilidad del tráfico (Desviación): {ds:.2f}")
 print(f"Mediana del tráfico: {mediana}")
 
+"""
+Si eliminas la importaciond e Numpy saltara un name error ya que no esta definido
+"""
