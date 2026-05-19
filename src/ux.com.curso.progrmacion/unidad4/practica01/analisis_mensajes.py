@@ -41,4 +41,3 @@ print(f"Pico de actividad registrado: {maximo} mensajes")
 print(f"Variabilidad del tráfico (Desviación): {ds:.2f}")
 print(f"Mediana del tráfico: {mediana}")
 
-listar_librerias(__file__)
